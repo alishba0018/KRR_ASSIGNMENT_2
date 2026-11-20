@@ -1,0 +1,539 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:absolute:5/"
+     xml:base="urn:absolute:5/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:wound-ontology="http://example.org/wound-ontology#">
+    <owl:Ontology rdf:about="http://example.org/wound-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/wound-ontology#affectsTissue -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/wound-ontology#affectsTissue">
+        <rdfs:domain rdf:resource="http://example.org/wound-ontology#Wound"/>
+        <rdfs:range rdf:resource="http://example.org/wound-ontology#BodyTissue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/wound-ontology#hasCause -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/wound-ontology#hasCause">
+        <rdfs:domain rdf:resource="http://example.org/wound-ontology#Wound"/>
+        <rdfs:range rdf:resource="http://example.org/wound-ontology#WoundCause"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/wound-ontology#hasComplication -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/wound-ontology#hasComplication">
+        <rdfs:domain rdf:resource="http://example.org/wound-ontology#Wound"/>
+        <rdfs:range rdf:resource="http://example.org/wound-ontology#WoundComplication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/wound-ontology#treatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/wound-ontology#treatedBy">
+        <rdfs:domain rdf:resource="http://example.org/wound-ontology#Wound"/>
+        <rdfs:range rdf:resource="http://example.org/wound-ontology#WoundTreatment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/wound-ontology#hasBleedingDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/wound-ontology#hasBleedingDuration">
+        <rdfs:domain rdf:resource="http://example.org/wound-ontology#Wound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/wound-ontology#hasDepth -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/wound-ontology#hasDepth">
+        <rdfs:domain rdf:resource="http://example.org/wound-ontology#Wound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/wound-ontology#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/wound-ontology#hasDescription">
+        <rdfs:domain rdf:resource="http://example.org/wound-ontology#Wound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/wound-ontology#hasHealingDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/wound-ontology#hasHealingDuration">
+        <rdfs:domain rdf:resource="http://example.org/wound-ontology#Wound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/wound-ontology#hasSeverity -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/wound-ontology#hasSeverity">
+        <rdfs:domain rdf:resource="http://example.org/wound-ontology#Wound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/wound-ontology#Abrasion -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Abrasion">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#OpenWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Abscess -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Abscess">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundComplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Avulsion -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Avulsion">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#OpenWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Bending -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Bending">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundCause"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#BloodVessel -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#BloodVessel">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#BodyTissue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#BodyTissue -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#BodyTissue"/>
+    
+
+
+    <!-- http://example.org/wound-ontology#Bone -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Bone">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#BodyTissue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Cellulitis -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Cellulitis">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundComplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#ClosedWound -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#ClosedWound">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#Wound"/>
+        <owl:disjointWith rdf:resource="http://example.org/wound-ontology#OpenWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Contusion -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Contusion">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#ClosedWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Crushing -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Crushing">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundCause"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Deceleration -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Deceleration">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundCause"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#DirectBlow -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#DirectBlow">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundCause"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#GasGangrene -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#GasGangrene">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundComplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Hematoma -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Hematoma">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#ClosedWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Infection -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Infection">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundComplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#InternalOrgan -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#InternalOrgan">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#BodyTissue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Joint -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Joint">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#BodyTissue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Laceration -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Laceration">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#OpenWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Medication -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Medication">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundTreatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Muscle -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Muscle">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#BodyTissue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#NecrotizingFasciitis -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#NecrotizingFasciitis">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundComplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Nerve -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Nerve">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#BodyTissue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#OpenWound -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#OpenWound">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#Wound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Puncture -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Puncture">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#OpenWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#SharpObject -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#SharpObject">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundCause"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Skin -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Skin">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#BodyTissue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#SubcutaneousTissue -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#SubcutaneousTissue">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#BodyTissue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Surgery -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Surgery">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundTreatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Tetanus -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Tetanus">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundComplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#TetanusVaccination -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#TetanusVaccination">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundTreatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Twisting -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Twisting">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundCause"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#Wound -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#Wound">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/wound-ontology#affectsTissue"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/wound-ontology#BodyTissue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/wound-ontology#hasCause"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/wound-ontology#WoundCause"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#WoundCause -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#WoundCause"/>
+    
+
+
+    <!-- http://example.org/wound-ontology#WoundCleaning -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#WoundCleaning">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundTreatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#WoundClosure -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#WoundClosure">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundTreatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#WoundComplication -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#WoundComplication"/>
+    
+
+
+    <!-- http://example.org/wound-ontology#WoundDressing -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#WoundDressing">
+        <rdfs:subClassOf rdf:resource="http://example.org/wound-ontology#WoundTreatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/wound-ontology#WoundTreatment -->
+
+    <owl:Class rdf:about="http://example.org/wound-ontology#WoundTreatment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/wound-ontology#ContusionWound1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/wound-ontology#ContusionWound1">
+        <rdf:type rdf:resource="http://example.org/wound-ontology#Contusion"/>
+        <wound-ontology:hasCause rdf:resource="http://example.org/wound-ontology#DirectBlow1"/>
+        <wound-ontology:hasBleedingDuration>4 minutes</wound-ontology:hasBleedingDuration>
+        <wound-ontology:hasDepth>2 meters</wound-ontology:hasDepth>
+        <wound-ontology:hasDescription>skin of cheek</wound-ontology:hasDescription>
+        <wound-ontology:hasHealingDuration>7 days</wound-ontology:hasHealingDuration>
+        <wound-ontology:hasSeverity>mild</wound-ontology:hasSeverity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/wound-ontology#DirectBlow1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/wound-ontology#DirectBlow1">
+        <rdf:type rdf:resource="http://example.org/wound-ontology#DirectBlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/wound-ontology#Muscle1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/wound-ontology#Muscle1"/>
+    
+
+
+    <!-- http://example.org/wound-ontology#PunctureWound1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/wound-ontology#PunctureWound1">
+        <rdf:type rdf:resource="http://example.org/wound-ontology#Puncture"/>
+        <wound-ontology:affectsTissue rdf:resource="http://example.org/wound-ontology#Skin1"/>
+        <wound-ontology:hasCause rdf:resource="http://example.org/wound-ontology#SharpObject1"/>
+        <wound-ontology:hasBleedingDuration>14 minutes</wound-ontology:hasBleedingDuration>
+        <wound-ontology:hasSeverity>mild</wound-ontology:hasSeverity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/wound-ontology#SharpObject1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/wound-ontology#SharpObject1">
+        <rdf:type rdf:resource="http://example.org/wound-ontology#SharpObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/wound-ontology#Skin1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/wound-ontology#Skin1">
+        <rdf:type rdf:resource="http://example.org/wound-ontology#Skin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/wound-ontology#Wound2 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/wound-ontology#Wound2">
+        <rdf:type rdf:resource="http://example.org/wound-ontology#Laceration"/>
+        <wound-ontology:hasBleedingDuration>7 minutes</wound-ontology:hasBleedingDuration>
+        <wound-ontology:hasDepth>3 cm</wound-ontology:hasDepth>
+        <wound-ontology:hasDescription>location is right leg</wound-ontology:hasDescription>
+        <wound-ontology:hasHealingDuration>2 days</wound-ontology:hasHealingDuration>
+        <wound-ontology:hasSeverity>moderate</wound-ontology:hasSeverity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/wound-ontology#Wound3 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/wound-ontology#Wound3">
+        <rdf:type rdf:resource="http://example.org/wound-ontology#Abrasion"/>
+        <wound-ontology:hasBleedingDuration>10 minutes</wound-ontology:hasBleedingDuration>
+        <wound-ontology:hasDepth>10 cm</wound-ontology:hasDepth>
+        <wound-ontology:hasDescription>skin abrasion</wound-ontology:hasDescription>
+        <wound-ontology:hasHealingDuration>4 days</wound-ontology:hasHealingDuration>
+        <wound-ontology:hasSeverity>mild</wound-ontology:hasSeverity>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
